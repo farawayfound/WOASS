@@ -1,0 +1,49 @@
+﻿@model WOASS.Models.Work
+
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <fieldset class="align-top border custom-control-inline mb-2 p-2 shadow">
+        <legend>Work Order Details</legend>
+
+        <table class="table">
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <td>Order Date</td>
+                <td>@Model.OrderDate</td>
+            </tr>
+            <tr>
+                <td>Priority</td>
+                <td>@Model.Priority</td>
+            </tr>
+            <tr>
+                <td>Work Type</td>
+                <td>@Model.WorkType</td>
+            </tr>
+            <tr>
+                <td>Pre-Paid</td>
+                <td>@Model.PayStatus</td>
+            </tr>
+            <tr>
+                <td>Gear ID</td>
+                <td>@Model.GearId</td>
+            </tr>
+        </table>
+    </fieldset>
+    <div>
+        <input type="button" class="btn-outline-dark" value="back"/> 
+        <a asp-controller="Work" asp-action="Edit"> <input type="button" class="btn-outline-warning" value="Edit" /> </a>
+        <input class="btn-outline-danger" type="button" value="Delete" />
+    </div>
+</body>
