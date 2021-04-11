@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cJ9DwHlT+CvM/za+XvDJauUjBiEKMMkrg/b/GJ4eV5Lndu1CeMIAtwkesLhBqjBYY8Ib0QYrpPKPv33/XFX+8w==",
+  "dgSpecHash": "yV5V7sLY4vEK0MGTnK73GXEmkfgUnfB+4lArWd++55JdIk767VBMI4vBl2PTCItVOgyD7Wa5fFZmN2tP/I8W8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david\\OneDrive\\Documents\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.14\\microsoft.netcore.app.host.win-x64.3.1.14.nupkg.sha512"
+  ],
   "logs": []
 }
