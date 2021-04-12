@@ -4,7 +4,7 @@
     {
         // Fields
 
-        public int Id               { get; set; }
+        public int      Id          { get; set; }
         public string   OrderDate   { get; set; }
         public bool     Priority    { get; set; }
         public string   WorkType    { get; set; }

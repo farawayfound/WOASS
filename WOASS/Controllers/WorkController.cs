@@ -1,10 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using WOASS.Models;
 
 namespace WOASS.Controllers
 {
     public class WorkController : Controller
     {
+        // F i e l d s   &    P r o p e r t i e s
+
+        private IWorkRepository _repository;
+
+        // C o n s t r u c t o r s
+
+        public WorkController(IWorkRepository repository)
+        {
+            _repository = repository;
+        }
+
 
         //Create
 
@@ -20,7 +32,9 @@ namespace WOASS.Controllers
         {
             //Go to the database and get all references
             //Have the View list all those refrences
-            return View();
+            IQueryable<Work> allWork;
+            allWork = _repository.GetAllWork();
+            return View(allWork);
         }
 
         public IActionResult Details(int id = 0)

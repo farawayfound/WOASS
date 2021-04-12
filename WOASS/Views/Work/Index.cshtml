@@ -1,0 +1,18 @@
+﻿@model IQueryable<Work>
+
+<h2>Work Orders</h2>
+
+<hr />
+
+@foreach (Work w in Model)
+{
+    <h3>ID: @w.Id</h3>
+    <div>Order Date: @w.OrderDate</div>
+    <div>Priority: @w.Priority</div>
+    <div>Work Type: @w.WorkType</div>
+    <div>Notes: @w.Notes</div>
+    <div>Pay Status: @w.PayStatus</div>
+    <div>Gear ID: @w.GearId</div>
+    <div>User ID: @w.UserId</div>
+    <hr />
+}

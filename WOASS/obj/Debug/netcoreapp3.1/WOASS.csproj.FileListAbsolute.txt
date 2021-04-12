@@ -78,3 +78,4 @@ C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\WOASS.dll
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\WOASS.pdb
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\WOASS.genruntimeconfig.cache
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\WOASS.csproj.CopyComplete
+C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\Razor\Views\Work\Index.cshtml.g.cs
