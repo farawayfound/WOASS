@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,7 +15,7 @@ namespace WOASS
 {
     public class Startup
     {
-        //Field
+        //Fields & Properties
         public IConfiguration Configuration { get; }
         
         //Constructors
@@ -28,7 +29,10 @@ namespace WOASS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IWorkRepository, FakeWorkRepository>();
+            services.AddDbContext<AppDbContext>(options     //Add AppDbContext class to use sql server to get a connection string
+                => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IWorkRepository, FakeWorkRepository>(); //pass FakeWorkRepository
 
             services.AddControllersWithViews();
         }

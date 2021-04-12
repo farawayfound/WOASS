@@ -1,5 +1,8 @@
-﻿namespace WOASS.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WOASS.Models
 {
+    [Table("WorkOrders")]
     public class Work
     {
         // Fields

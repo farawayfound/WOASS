@@ -32,9 +32,9 @@ namespace WOASS.Controllers
         {
             //Go to the database and get all references
             //Have the View list all those refrences
-            IQueryable<Work> allWork;
-            allWork = _repository.GetAllWork();
-            return View(allWork);
+            /*IQueryable<Work> allWork;
+            allWork = _repository.GetAllWork();*/
+            return View(_repository.GetAllWork());
         }
 
         public IActionResult Details(int id = 0)
