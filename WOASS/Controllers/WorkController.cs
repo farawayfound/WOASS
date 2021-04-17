@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using WOASS.Models;
+using WOASS.Models.ViewModels;
 
 namespace WOASS.Controllers
 {
@@ -44,14 +45,6 @@ namespace WOASS.Controllers
             //Have the View display that reference
             Work board1 = new Work
             {
-                Id = 1,
-                OrderDate = "2020-02-09",
-                Priority = false,
-                WorkType = "base grind",
-                PayStatus = true,
-                PriceId = 2,
-                GearId = 5,
-                UserId = 2
             };
             return View(board1);
         }
@@ -60,21 +53,7 @@ namespace WOASS.Controllers
 
         public IActionResult Edit(int id = 0)
         {
-
-            //Go to the database and get 1 Reference based on the id received
-            //Have the View display that reference
-            Work board1 = new Work
-            {
-                Id = 1,
-                OrderDate = "2020-02-09",
-                Priority = false,
-                WorkType = "base grind",
-                PayStatus = true,
-                PriceId = 2,
-                GearId = 5,
-                UserId = 2
-            };
-            return View(board1);
+            return View();
         }
 
         //Delete

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using WOASS.Models;
+using WOASS.Models.ViewModels;
 
 namespace WOASS.Controllers
 {

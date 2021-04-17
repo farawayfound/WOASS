@@ -9,7 +9,7 @@ namespace WOASS.Models
     {
         public IQueryable<Work> GetAllWork()
         {
-            Work[] workOrders = new Work[2];
+            Work[] workOrders = new Work[4];
 
             workOrders[0] = new Work
             {
@@ -27,14 +27,40 @@ namespace WOASS.Models
             workOrders[1] = new Work
             {
                 Id = 2,
-                OrderDate = "10/30/2020",
+                OrderDate = "2020-02-09",
                 Priority = false,
-                WorkType = "basic tune",
+                WorkType = "base grind",
                 Notes = null,
                 PayStatus = true,
                 PriceId = 2,
                 GearId = 2,
                 UserId = 2
+            };
+
+            workOrders[2] = new Work
+            {
+                Id = 3,
+                OrderDate = "2020-02-09",
+                Priority = false,
+                WorkType = "base grind",
+                Notes = null,
+                PayStatus = true,
+                PriceId = 2,
+                GearId = 3,
+                UserId = 2
+            };
+
+            workOrders[3] = new Work
+            {
+                Id = 4,
+                OrderDate = "10/30/2020",
+                Priority = false,
+                WorkType = "basic tune",
+                Notes = null,
+                PayStatus = true,
+                PriceId = 3,
+                GearId = 4,
+                UserId = 3
             };
 
             IEnumerable<Work> enumWork = workOrders.AsEnumerable<Work>();
