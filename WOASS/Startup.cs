@@ -16,12 +16,12 @@ namespace WOASS
     public class Startup
     {
         //Fields & Properties
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
         
         //Constructors
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
         //Methods
@@ -30,9 +30,9 @@ namespace WOASS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options     //Add AppDbContext class to use sql server to get a connection string
-                => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<IWorkRepository, FakeWorkRepository>(); //pass FakeWorkRepository
+            services.AddScoped<IWorkRepository, EfWorkRepository>(); //pass FakeWorkRepository
 
             services.AddControllersWithViews();
         }

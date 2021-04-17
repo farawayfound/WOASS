@@ -20,5 +20,19 @@ namespace WOASS.Models
         }
 
         // M e t h o d s
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Work>()
+                        .HasData(new Work 
+                        { 
+                            Id = 1, 
+                            OrderDate = "10/28/2020",
+                            Priority = false,
+                            WorkType = "wax"
+                        });
+        }
     }
 }
