@@ -10,6 +10,7 @@ namespace WOASS.Controllers
         // F i e l d s   &    P r o p e r t i e s
 
         private IWorkRepository _repository;
+        private int pageSize = 3;
 
         // C o n s t r u c t o r s
 
@@ -23,8 +24,7 @@ namespace WOASS.Controllers
 
         public ViewResult Add()
         {
-            ViewResult answer = View();
-            return answer;
+            return View();
         }
 
         //Read
@@ -33,20 +33,36 @@ namespace WOASS.Controllers
         {
             //Go to the database and get all references
             //Have the View list all those refrences
-            /*IQueryable<Work> allWork;
-            allWork = _repository.GetAllWork();*/
-            return View(_repository.GetAllWork());
+            IQueryable<Work> allWork;
+            allWork = _repository.GetAllWork();
+            return View(allWork);
         }
 
-        public IActionResult Details(int id = 0)
+       /* public IActionResult Index(int workPage = 1)
+        {
+            IQueryable<Work> someWork =
+                   _repository.GetAllWork()
+                              .OrderBy(w => w.WorkId)
+                              .Skip((workPage - 1) * pageSize)
+                              .Take(pageSize);
+            return View(someWork);
+        }*/
+
+        public IActionResult Details(int id)
         {
 
-            //Go to the database and get 1 Reference based on the id received
-            //Have the View display that reference
-            Work board1 = new Work
+            Work workOrder = _repository.GetWorkById(id);
+            if (workOrder != null)
             {
-            };
-            return View(board1);
+                return View(workOrder);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Search(string keyword)
+        {
+            IQueryable<Work> workOrders = _repository.GetWorkByKeyword(keyword);
+            return View(workOrders);
         }
 
         //Update

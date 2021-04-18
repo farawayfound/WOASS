@@ -22,5 +22,17 @@ namespace WOASS.Models
             return _context.WorkOrders;
         }
 
+        public Work GetWorkById(int workId)
+        {
+            return _context.WorkOrders
+                .Where(w => w.WorkId == workId)
+                .FirstOrDefault();
+        }
+
+        public IQueryable<Work> GetWorkByKeyword(string keyword)
+        {
+            return _context.WorkOrders
+                .Where(w => w.Notes.Contains(keyword));
+        }
     }
 }

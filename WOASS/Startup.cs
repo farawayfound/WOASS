@@ -32,7 +32,7 @@ namespace WOASS
             services.AddDbContext<AppDbContext>(options     //Add AppDbContext class to use sql server to get a connection string
                 => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<IWorkRepository, FakeWorkRepository>(); //pass FakeWorkRepository
+            services.AddScoped<IWorkRepository, EfWorkRepository>(); //pass FakeWorkRepository
 
             services.AddControllersWithViews();
         }
