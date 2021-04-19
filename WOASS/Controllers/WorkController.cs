@@ -31,11 +31,16 @@ namespace WOASS.Controllers
 
         public IActionResult Index()
         {
+            WorkListViewModel wlvm = new WorkListViewModel();
+            wlvm.WorkOrders = _repository.GetAllWork()
+                                         .OrderBy(w => w.WorkId);
+
+            return View(wlvm);
             //Go to the database and get all references
             //Have the View list all those refrences
-            IQueryable<Work> allWork;
+            /*IQueryable<Work> allWork;
             allWork = _repository.GetAllWork();
-            return View(allWork);
+            return View(allWork);*/
         }
 
        /* public IActionResult Index(int workPage = 1)
@@ -48,7 +53,7 @@ namespace WOASS.Controllers
             return View(someWork);
         }*/
 
-        public IActionResult Details(int id)
+        /*public IActionResult Details(int id)
         {
 
             Work workOrder = _repository.GetWorkById(id);
@@ -63,7 +68,7 @@ namespace WOASS.Controllers
         {
             IQueryable<Work> workOrders = _repository.GetWorkByKeyword(keyword);
             return View(workOrders);
-        }
+        }*/
 
         //Update
 

@@ -10,7 +10,7 @@ namespace WOASS.Models
 
         // Fields & Properties
 
-        public int    Id     { get; set; }
+        public int    GearId     { get; set; }
 
         public string Make   { get; set; }
 

@@ -8,7 +8,7 @@ namespace WOASS.Models
     public interface IWorkRepository
     {
         public IQueryable<Work> GetAllWork();
-        Work GetWorkById(int workId);
-        IQueryable<Work> GetWorkByKeyword(string keyword);
+       /* Work GetWorkById(int workId);
+        IQueryable<Work> GetWorkByKeyword(string keyword);*/
     }
 }

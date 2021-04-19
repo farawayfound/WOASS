@@ -22,7 +22,7 @@ namespace WOASS.Models
             return _context.WorkOrders;
         }
 
-        public Work GetWorkById(int workId)
+        /*public Work GetWorkById(int workId)
         {
             return _context.WorkOrders
                 .Where(w => w.WorkId == workId)
@@ -33,6 +33,6 @@ namespace WOASS.Models
         {
             return _context.WorkOrders
                 .Where(w => w.Notes.Contains(keyword));
-        }
+        }*/
     }
 }
