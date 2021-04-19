@@ -43,7 +43,7 @@ namespace WOASS.Controllers
             return View(allWork);*/
         }
 
-        public IActionResult Index(int workPage = 1)
+        /*public IActionResult Index(int workPage = 1)
         {
             IQueryable<Work> someWork =
                    _repository.GetAllWork()
@@ -51,7 +51,7 @@ namespace WOASS.Controllers
                               .Skip((workPage - 1) * pageSize)
                               .Take(pageSize);
             return View(someWork);
-        }
+        }*/
 
         public IActionResult Details(int id)
         {
