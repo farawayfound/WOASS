@@ -122,3 +122,4 @@ C:\Users\david\source\MSSA\Project\WOASS\WOASS\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\Razor\Views\Shared\WorkSummary.cshtml.g.cs
+C:\Users\david\source\MSSA\Project\WOASS\WOASS\obj\Debug\netcoreapp3.1\Razor\Views\Work\Search.cshtml.g.cs

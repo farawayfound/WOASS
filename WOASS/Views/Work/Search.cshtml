@@ -1,0 +1,10 @@
+﻿@model IQueryable<Work>
+
+<hr/>
+@foreach (Work w in Model)
+            {
+                <h3>ID: @w.WorkId</h3>
+                <h4>@w.WorkType</h4>
+                <h4>Customer: @w.UserId</h4>
+                <p>@w.Notes</p>
+            }

@@ -1,0 +1,53 @@
+﻿@model WOASS.Models.Work
+    
+    <head>
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+
+
+    <body>
+        <form method="post">
+            <fieldset class="align-top border custom-control-inline mb-2 p-2 shadow">
+                <legend>Edit Work Order</legend>
+                <table class="table">
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td> @Model.WorkId </td>
+                    </tr>
+                    <tr>
+                        <td>Order Date</td>
+                        <td><input asp-for="OrderDate" type="date" placeholder=@Model.OrderDate /></td>
+                    </tr>
+                    <tr>
+                        <td>Priority</td>
+                        <td><input asp-for="Priority" placeholder=@Model.Priority /></td>
+                    </tr>
+                    <tr>
+                        <td>Work Type</td>
+                        <td><input asp-for="WorkType" placeholder=@Model.WorkType /></td>
+                    </tr>
+                    <tr>
+                        <td>Pre-Paid</td>
+                        <td><input asp-for="PayStatus" placeholder=@Model.PayStatus /></td>
+                    </tr>
+                    <tr>
+                        <td>Gear ID</td>
+                        <td><input asp-for="GearId" type="number" placeholder=@Model.GearId /></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div>
+                <a asp-controller="Work" asp-action="Details">
+                    <input type="button" class="btn-outline-dark" value="Cancel" />
+                </a>
+                <a asp-controller="Work" asp-action="">
+                    <input type="submit" class="btn-outline-success" value="Update" />
+                </a>
+            </div>
+        </form>
+    </body>

@@ -22,7 +22,7 @@ namespace WOASS.Models
             return _context.WorkOrders;
         }
 
-        /*public Work GetWorkById(int workId)
+        public Work GetWorkById(int workId)
         {
             return _context.WorkOrders
                 .Where(w => w.WorkId == workId)
@@ -33,6 +33,21 @@ namespace WOASS.Models
         {
             return _context.WorkOrders
                 .Where(w => w.Notes.Contains(keyword));
-        }*/
+        }
+
+        public Work UpdateWork(Work work)
+        {
+            Work workToUpdate = _context.WorkOrders
+                                        .SingleOrDefault(w => w.WorkId == work.WorkId);
+            if (workToUpdate != null)
+            {
+                workToUpdate.WorkType = work.WorkType;
+                workToUpdate.PayStatus = work.PayStatus;
+                workToUpdate.Priority = work.Priority;
+                workToUpdate.Notes = work.Notes;
+                _context.SaveChanges();
+            }
+            return workToUpdate;
+        }
     }
 }

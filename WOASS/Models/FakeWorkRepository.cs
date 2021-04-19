@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WOASS.Models
 {
-    public class FakeWorkRepository : IWorkRepository
+    public class FakeWorkRepository //: IWorkRepository
     {
         public IQueryable<Work> GetAllWork()
         {

@@ -43,7 +43,7 @@ namespace WOASS.Controllers
             return View(allWork);*/
         }
 
-       /* public IActionResult Index(int workPage = 1)
+        public IActionResult Index(int workPage = 1)
         {
             IQueryable<Work> someWork =
                    _repository.GetAllWork()
@@ -51,9 +51,9 @@ namespace WOASS.Controllers
                               .Skip((workPage - 1) * pageSize)
                               .Take(pageSize);
             return View(someWork);
-        }*/
+        }
 
-        /*public IActionResult Details(int id)
+        public IActionResult Details(int id)
         {
 
             Work workOrder = _repository.GetWorkById(id);
@@ -68,15 +68,34 @@ namespace WOASS.Controllers
         {
             IQueryable<Work> workOrders = _repository.GetWorkByKeyword(keyword);
             return View(workOrders);
-        }*/
+        }
 
         //Update
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            Work work = _repository.GetWorkById(id);
+            if (work != null)
+            {
+                return View(work);
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Update(Work work)
+        {
+            _repository.UpdateWork(work);
+            return RedirectToAction("Index");
+        }
 
         public IActionResult Edit(int id = 0)
         {
             return View();
         }
 
+        
         //Delete
     }
 }
