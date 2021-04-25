@@ -30,7 +30,7 @@ namespace WOASS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options     //Add AppDbContext class to use sql server to get a connection string
-                => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+                => options.UseSqlServer(_configuration.GetConnectionString("AzureDatabase")));
 
             services.AddScoped<IWorkRepository, EfWorkRepository>(); //pass FakeWorkRepository
 

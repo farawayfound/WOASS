@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj": {}
+    "C:\\Users\\guohe\\Source\\Repos\\WOASS\\WOASS\\WOASS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj": {
+    "C:\\Users\\guohe\\Source\\Repos\\WOASS\\WOASS\\WOASS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj",
+        "projectUniqueName": "C:\\Users\\guohe\\Source\\Repos\\WOASS\\WOASS\\WOASS.csproj",
         "projectName": "WOASS",
-        "projectPath": "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\WOASS.csproj",
-        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\source\\MSSA\\Project\\WOASS\\WOASS\\obj\\",
+        "projectPath": "C:\\Users\\guohe\\Source\\Repos\\WOASS\\WOASS\\WOASS.csproj",
+        "packagesPath": "C:\\Users\\guohe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\guohe\\Source\\Repos\\WOASS\\WOASS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\guohe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -65,12 +67,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.14, 3.1.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
